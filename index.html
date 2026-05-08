@@ -3,325 +3,423 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Kassi Montenegro | Career Consulting</title>
+    <title>Kassandra Montenegro | Career Consulting</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar">
-        <div class="container">
-            <div class="navbar-brand">
-                <h1>Kassi Montenegro</h1>
-                <p class="tagline">Career Consulting & Professional Development</p>
+        <div class="nav-wrapper">
+            <div class="nav-brand">
+                <h1>Kassandra Montenegro</h1>
+                <span class="nav-subtitle">Career Consulting</span>
             </div>
             <ul class="nav-menu">
-                <li class="nav-item">
-                    <a href="#home" class="nav-link" onclick="showTab('home')">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#education" class="nav-link" onclick="showTab('education')">Higher Education</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#tech" class="nav-link" onclick="showTab('tech')">Technology</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#law" class="nav-link" onclick="showTab('law')">Law</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#contact" class="nav-link" onclick="showTab('contact')">Contact</a>
-                </li>
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About Me</a></li>
+                <li><a href="#education" class="nav-link">Higher Education</a></li>
+                <li><a href="#tech" class="nav-link">Technology</a></li>
+                <li><a href="#law" class="nav-link">Law</a></li>
+                <li><a href="#resources" class="nav-link">Resources</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
     </nav>
 
-    <!-- Main Content -->
-    <main>
-        <!-- HOME TAB -->
-        <div id="home" class="tab-content active">
-            <!-- Hero Section -->
-            <section class="hero">
-                <div class="hero-content">
-                    <h2>Welcome to Your Career Transformation</h2>
-                    <p>A career coach with experience in higher education, technology, and law career paths</p>
-                    <button class="cta-button" onclick="showTab('contact')">Get Started</button>
-                </div>
-            </section>
-
-            <!-- Services Overview -->
-            <section class="services-overview">
-                <div class="container">
-                    <h2>Our Services</h2>
-                    <div class="services-grid">
-                        <div class="card">
-                            <i class="fas fa-graduation-cap"></i>
-                            <h3>Higher Education</h3>
-                            <p>College selection, major choice, graduate school preparation, and academic planning</p>
-                            <a href="#" onclick="showTab('education')" class="card-link">Learn More →</a>
-                        </div>
-                        <div class="card">
-                            <i class="fas fa-laptop-code"></i>
-                            <h3>Technology</h3>
-                            <p>Career transitions, skill development, interview preparation, and industry navigation</p>
-                            <a href="#" onclick="showTab('tech')" class="card-link">Learn More →</a>
-                        </div>
-                        <div class="card">
-                            <i class="fas fa-gavel"></i>
-                            <h3>Law</h3>
-                            <p>Nagvigating a Big Law firm, legal career paths, and professional development</p>
-                            <a href="#" onclick="showTab('law')" class="card-link">Learn More →</a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- About Section -->
-            <section class="about">
-                <div class="container">
-                    <h2>About Kassi Montenegro</h2>
-                    <p>
-                        With years of experience in career coaching and professional development, I specialize in helping 
-                        individuals navigate critical career decisions and transitions. My expertise spans higher education guidance, 
-                        technology early-in-career development, and legal profession support.
-                    </p>
-                    <p>
-                        I'm committed to providing personalized, actionable guidance tailored to each client's unique goals and circumstances.
-                    </p>
-                    <a href="https://www.linkedin.com/in/kassandramontenegro/" target="_blank" class="social-link">
-                        <i class="fab fa-linkedin"></i> Connect on LinkedIn
-                    </a>
-                </div>
-            </section>
+    <!-- HERO SECTION -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h2 class="hero-title">Start With Your Why</h2>
+            <p class="hero-subtitle">Transform your career through intentional guidance in higher education, technology, and law.</p>
+            <a href="#about" class="cta-button">Discover Your Path</a>
         </div>
+        <div class="hero-image">
+            <img src="https://via.placeholder.com/600x700?text=Career+Consulting" alt="Career Consulting">
+        </div>
+    </section>
 
-        <!-- HIGHER EDUCATION TAB -->
-        <div id="education" class="tab-content">
-            <section class="service-header" style="background-color: var(--navy-blue);">
-                <div class="container">
-                    <h2>Higher Education Consulting</h2>
-                    <p>Guiding your academic journey and future success</p>
+    <!-- ABOUT ME SECTION -->
+    <section id="about" class="content-section about-section">
+        <div class="section-wrapper">
+            <div class="about-content">
+                <h2 class="section-title">About Me</h2>
+                <p class="section-intro">I'm Kassandra Montenegro, a career consultant dedicated to helping professionals navigate critical transitions and build meaningful careers.</p>
+                
+                <div class="about-story">
+                    <p>With experience spanning higher education, technology, and law, I understand the unique challenges and opportunities in each field. My approach is deeply personal—I don't believe in one-size-fits-all solutions. Instead, I work with you to uncover your values, strengths, and authentic career aspirations.</p>
+                    
+                    <p>Whether you're a student exploring academic paths, a career-changer entering tech, or a prospective law student, my goal is to empower you with the clarity and confidence to make decisions that align with who you are and who you want to become.</p>
                 </div>
-            </section>
 
-            <div class="container">
-                <!-- Section 1 -->
-                <section class="service-section">
-                    <h3>College Selection & Admissions</h3>
-                    <p>
-                        Navigate the college selection process with confidence. Whether you're looking at Ivy League schools, 
-                        state universities, or specialized colleges, I'll help you find the right fit for your academic goals and personal values.
-                    </p>
-                    <div class="content-grid">
-                        <div class="text-content">
-                            <h4>What We Cover:</h4>
-                            <ul>
-                                <li>University comparison and evaluation</li>
-                                <li>Essay and personal statement review</li>
-                                <li>Interview preparation</li>
-                            </ul>
-                        </div>
-                        <div class="media-placeholder">
-                            <img src="assets/images/placeholder-education.jpg" alt="College Admissions">
-                            <p class="caption">📸 Add your image here (assets/images/)</p>
-                        </div>
-                </section>
-
-                <!-- Section 2 -->
-                <section class="service-section">
-                    <h3>Major & Career Planning</h3>
-                    <p>
-                        Choosing the right major is a crucial decision. I'll help you align your academic interests with career opportunities 
-                        and ensure you're building the skills employers want.
-                    </p>
-                    <div class="content-grid">
-                        <div class="media-placeholder">
-                            <img src="assets/images/placeholder-education-2.jpg" alt="Major Selection">
-                            <p class="caption">📸 Add your image here (assets/images/)</p>
-                        </div>
-                        <div class="text-content">
-                            <h4>Guidance Includes:</h4>
-                            <ul>
-                                <li>Interest and values assessment</li>
-                                <li>Major exploration and research</li>
-                                <li>Career path visualization</li>
-                                <li>Internship and networking strategy</li>
-                            </ul>
-                        </div>
+                <div class="about-values">
+                    <div class="value-card">
+                        <i class="fas fa-lightbulb"></i>
+                        <h4>Clarity</h4>
+                        <p>Clear thinking about what matters most in your career</p>
                     </div>
-
-        <!-- TECHNOLOGY TAB -->
-        <div id="tech" class="tab-content">
-            <section class="service-header" style="background-color: var(--navy-blue);">
-                <div class="container">
-                    <h2>Technology Career Consulting</h2>
-                    <p>Launch or advance your tech career with expert guidance</p>
+                    <div class="value-card">
+                        <i class="fas fa-compass"></i>
+                        <h4>Direction</h4>
+                        <p>Strategic guidance tailored to your unique situation</p>
+                    </div>
+                    <div class="value-card">
+                        <i class="fas fa-rocket"></i>
+                        <h4>Confidence</h4>
+                        <p>The assurance to take decisive action toward your goals</p>
+                    </div>
                 </div>
-            </section>
 
-            <div class="container">
-                <!-- Section 1 -->
-                <section class="service-section">
-                    <h3>Career Transitions in Tech</h3>
-                    <p>
-                        Thinking of breaking into tech? Whether you're switching industries or starting your first tech role, 
-                        I'll help you navigate the transition successfully.
-                    </p>
-                    <div class="content-grid">
-                        <div class="text-content">
-                            <h4>Transition Support:</h4>
-                            <ul>
-                                <li>Career pivot strategy and planning</li>
-                                <li>Skill gap identification</li>
-                                <li>Portfolio development</li>
-                                <li>Networking in tech</li>
-                            </ul>
-                        </div>
-                        <div class="media-placeholder">
-                            <img src="assets/images/placeholder-tech.jpg" alt="Tech Career">
-                            <p class="caption">📸 Add your image here (assets/images/)</p>
-                        </div>
-                    </div>
-
-                <!-- Section 2 -->
-                <section class="service-section">
-                    <h3>Interview Preparation & Technical Skills</h3>
-                    <p>
-                        Ace your tech interviews with personalized preparation. From technical assessments to behavioral questions, 
-                        I'll help you showcase your best self to potential employers.
-                    </p>
-                    <div class="content-grid">
-                        <div class="media-placeholder">
-                            <img src="assets/images/placeholder-tech-2.jpg" alt="Interview Prep">
-                            <p class="caption">📸 Add your image here (assets/images/)</p>
-                        </div>
-                        <div class="text-content">
-                            <h4>Interview Success Package:</h4>
-                            <ul>
-                                <li>Technical problem-solving practice</li>
-                                <li>System design interview guidance</li>
-                                <li>Behavioral interview coaching</li>
-                                <li>Salary negotiation strategies</li>
-                                <li>Company research and preparation</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                </section>
+                <div class="cta-section">
+                    <p>Ready to explore how I can support your career journey?</p>
+                    <a href="#contact" class="cta-button">Let's Talk</a>
+                </div>
+            </div>
+            <div class="about-image">
+                <img src="https://via.placeholder.com/400x500?text=Kassandra" alt="Kassandra Montenegro">
             </div>
         </div>
+    </section>
 
-        <!-- LAW TAB -->
-        <div id="law" class="tab-content">
-            <section class="service-header" style="background-color: var(--navy-blue);">
-                <div class="container">
-                    <h2>Legal Career Consulting</h2>
-                    <p>Navigate law school and build a successful legal career</p>
+    <!-- HIGHER EDUCATION SECTION -->
+    <section id="education" class="content-section education-section">
+        <div class="section-wrapper">
+            <h2 class="section-title">Higher Education Consulting</h2>
+            <p class="section-intro">Navigate the academic landscape with clarity and confidence</p>
+
+            <div class="service-grid">
+                <div class="service-card">
+                    <div class="card-header">
+                        <i class="fas fa-graduation-cap"></i>
+                        <h3>College Selection</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>Find the right fit among thousands of options. I help you evaluate schools based on academics, culture, values, and career outcomes.</p>
+                        <ul class="card-list">
+                            <li>University research and comparison</li>
+                            <li>Application strategy and timeline</li>
+                            <li>Personal statement coaching</li>
+                            <li>Interview preparation</li>
+                            <li>Financial aid guidance</li>
+                        </ul>
+                    </div>
                 </div>
-            </section>
 
-            <div class="container">
-                <!-- Section 1 -->
-                <section class="service-section">
-                    <h3>Law School Preparation & Strategy - CUSTOMIZE ME</h3>
-                    <p>
-                        Considering law school? Get expert guidance on school selection, LSAT preparation, and application strategy 
-                        to maximize your chances of admission to top schools.
-                    </p>
-                    <div class="content-grid">
-                        <div class="text-content">
-                            <h4>Law School Support:</h4>
-                            <ul>
-                                <li>LSAT study strategy and timeline</li>
-                                <li>Law school ranking and fit analysis</li>
-                                <li>Personal statement and essay writing</li>
-                                <li>Application timeline and deadlines</li>
-                                <li>Scholarship and financial aid planning</li>
-                            </ul>
-                        </div>
-                        <div class="media-placeholder">
-                            <img src="assets/images/placeholder-law.jpg" alt="Law School">
-                            <p class="caption">📸 Add your image here (assets/images/)</p>
-                        </div>
+                <div class="service-card">
+                    <div class="card-header">
+                        <i class="fas fa-book-open"></i>
+                        <h3>Major & Career Planning</h3>
                     </div>
-                    <a href="#" class="resource-button">📚 Law School Planning Guide (CUSTOMIZE ME)</a>
-                </section>
-
-                <!-- Section 2 -->
-                <section class="service-section">
-                    <h3>Bar Exam Preparation & Professional Success - CUSTOMIZE ME</h3>
-                    <p>
-                        Pass the bar and launch your legal career with confidence. I provide comprehensive guidance on bar prep strategy, 
-                        ethical considerations, and career planning.
-                    </p>
-                    <div class="content-grid">
-                        <div class="media-placeholder">
-                            <img src="assets/images/placeholder-law-2.jpg" alt="Bar Exam">
-                            <p class="caption">📸 Add your image here (assets/images/)</p>
-                        </div>
-                        <div class="text-content">
-                            <h4>Bar Exam & Professional Support:</h4>
-                            <ul>
-                                <li>Bar prep course comparison</li>
-                                <li>Study schedule optimization</li>
-                                <li>Bar passage strategy by jurisdiction</li>
-                                <li>Professional responsibility review</li>
-                                <li>New lawyer transition guidance</li>
-                            </ul>
-                        </div>
+                    <div class="card-body">
+                        <p>Align your academic interests with meaningful career outcomes. Explore majors that match your strengths and values.</p>
+                        <ul class="card-list">
+                            <li>Interest and skills assessment</li>
+                            <li>Major exploration deep-dives</li>
+                            <li>Career path mapping</li>
+                            <li>Internship strategy</li>
+                            <li>Networking guidance</li>
+                        </ul>
                     </div>
-                    <a href="#" class="resource-button">✅ Bar Prep Resource List (CUSTOMIZE ME)</a>
-                </section>
+                </div>
 
+                <div class="service-card">
+                    <div class="card-header">
+                        <i class="fas fa-school"></i>
+                        <h3>Graduate School</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>Prepare for advanced studies. From test prep to program selection to funding, get comprehensive support for your next steps.</p>
+                        <ul class="card-list">
+                            <li>GRE/GMAT strategy</li>
+                            <li>Program research and ranking</li>
+                            <li>Statement of purpose coaching</li>
+                            <li>Funding and scholarship guidance</li>
+                            <li>Career planning post-graduation</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
+    </section>
 
-        <!-- CONTACT TAB -->
-        <div id="contact" class="tab-content">
-            <section class="contact-section">
-                <div class="container">
-                    <h2>Get in Touch</h2>
-                    <p>Ready to take the next step in your career? I'd love to hear from you!</p>
+    <!-- TECHNOLOGY SECTION -->
+    <section id="tech" class="content-section tech-section">
+        <div class="section-wrapper">
+            <h2 class="section-title">Technology Career Consulting</h2>
+            <p class="section-intro">Break into tech or advance your career with strategic guidance</p>
 
-                    <div class="contact-grid">
-                        <div class="contact-card">
-                            <i class="fas fa-envelope"></i>
-                            <h3>Email</h3>
-                            <p>
-                                <a href="mailto:kassandramontenegro.jobs@gmail.com">kassandramontenegro.jobs@gmail.com</a>
-                            </p>
-                            <p class="small-text">kassandramontenegro.jobs@gmail.com</p>
-                        </div>
+            <div class="service-grid">
+                <div class="service-card">
+                    <div class="card-header">
+                        <i class="fas fa-exchange-alt"></i>
+                        <h3>Career Transitions</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>Thinking about entering tech? I'll help you navigate the transition, build necessary skills, and position yourself competitively.</p>
+                        <ul class="card-list">
+                            <li>Career pivot strategy</li>
+                            <li>Skill gap analysis</li>
+                            <li>Learning path recommendations</li>
+                            <li>Portfolio development</li>
+                            <li>Networking in tech communities</li>
+                        </ul>
+                    </div>
+                </div>
 
-                        <div class="contact-card">
-                            <i class="fab fa-linkedin"></i>
-                            <h3>LinkedIn</h3>
-                            <p>
-                                <a href="https://www.linkedin.com/in/kassandramontenegro/" target="_blank">
-                                    Connect with me
-                                </a>
-                            </p>
-                            <p class="small-text">Professional profile and recommendations</p>
-                        </div>
+                <div class="service-card">
+                    <div class="card-header">
+                        <i class="fas fa-laptop-code"></i>
+                        <h3>Interview Preparation</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>Master technical interviews, system design questions, and behavioral assessments. Get the offer you deserve.</p>
+                        <ul class="card-list">
+                            <li>Technical problem-solving practice</li>
+                            <li>System design coaching</li>
+                            <li>Behavioral interview prep</li>
+                            <li>Company research strategy</li>
+                            <li>Offer negotiation guidance</li>
+                        </ul>
+                    </div>
+                </div>
 
-                        <div class="contact-card">
-                            <i class="fas fa-calendar-check"></i>
-                            <h3>Schedule</h3>
-                            <p>
-            </section>
+                <div class="service-card">
+                    <div class="card-header">
+                        <i class="fas fa-star"></i>
+                        <h3>Specializations & Roles</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>Explore different tech paths—from software engineering to data science, product management to design. Find your niche.</p>
+                        <ul class="card-list">
+                            <li>Software development paths</li>
+                            <li>Data science and AI roles</li>
+                            <li>Product management careers</li>
+                            <li>UX/UI design specialization</li>
+                            <li>DevOps and cloud engineering</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
-    </main>
+    </section>
 
-    <!-- Footer -->
+    <!-- LAW SECTION -->
+    <section id="law" class="content-section law-section">
+        <div class="section-wrapper">
+            <h2 class="section-title">Legal Career Consulting</h2>
+            <p class="section-intro">Build a successful legal career aligned with your values</p>
+
+            <div class="service-grid">
+                <div class="service-card">
+                    <div class="card-header">
+                        <i class="fas fa-gavel"></i>
+                        <h3>Law School Prep</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>Navigate law school selection and admissions strategically. Get into the school that's right for you and your future.</p>
+                        <ul class="card-list">
+                            <li>LSAT strategy and timing</li>
+                            <li>Law school ranking analysis</li>
+                            <li>Personal statement coaching</li>
+                            <li>Application strategy</li>
+                            <li>Financial aid negotiation</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="card-header">
+                        <i class="fas fa-scale-balanced"></i>
+                        <h3>Bar Exam & Beyond</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>Prepare to pass the bar and transition into legal practice with confidence and clarity about your professional path.</p>
+                        <ul class="card-list">
+                            <li>Bar prep strategy and planning</li>
+                            <li>Jurisdiction-specific guidance</li>
+                            <li>Professional ethics review</li>
+                            <li>New attorney transition support</li>
+                            <li>Career planning post-admission</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="card-header">
+                        <i class="fas fa-briefcase"></i>
+                        <h3>Legal Specializations</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>Explore diverse legal practice areas—corporate, public interest, litigation, and more. Build a career you love.</p>
+                        <ul class="card-list">
+                            <li>Corporate and transaction law</li>
+                            <li>Public interest and government</li>
+                            <li>Litigation and advocacy</li>
+                            <li>Intellectual property</li>
+                            <li>Specialized practices (IP, healthcare, immigration)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RESOURCES SECTION -->
+    <section id="resources" class="content-section resources-section">
+        <div class="section-wrapper">
+            <h2 class="section-title">Resources & Tools</h2>
+            <p class="section-intro">Tools and resources to support your career journey</p>
+
+            <div class="resources-grid">
+                <div class="resource-item">
+                    <div class="resource-icon">
+                        <i class="fas fa-file-pdf"></i>
+                    </div>
+                    <h4>College Selection Workbook</h4>
+                    <p>A comprehensive guide to evaluating colleges and making your decision</p>
+                    <a href="#" class="resource-link">Download →</a>
+                </div>
+
+                <div class="resource-item">
+                    <div class="resource-icon">
+                        <i class="fas fa-list-check"></i>
+                    </div>
+                    <h4>Tech Interview Checklist</h4>
+                    <p>Everything you need to prepare for technical interviews</p>
+                    <a href="#" class="resource-link">Download →</a>
+                </div>
+
+                <div class="resource-item">
+                    <div class="resource-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h4>Law School Resource Guide</h4>
+                    <p>Comprehensive guide to law school preparation and success</p>
+                    <a href="#" class="resource-link">Download →</a>
+                </div>
+
+                <div class="resource-item">
+                    <div class="resource-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h4>Career Path Planner</h4>
+                    <p>Strategic framework for visualizing your career trajectory</p>
+                    <a href="#" class="resource-link">Download →</a>
+                </div>
+
+                <div class="resource-item">
+                    <div class="resource-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h4>Major Exploration Guide</h4>
+                    <p>Discover majors that align with your interests and goals</p>
+                    <a href="#" class="resource-link">Download →</a>
+                </div>
+
+                <div class="resource-item">
+                    <div class="resource-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h4>Legal Career Handbook</h4>
+                    <p>Navigate legal specializations and career paths</p>
+                    <a href="#" class="resource-link">Download →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="content-section contact-section">
+        <div class="section-wrapper">
+            <h2 class="section-title">Let's Connect</h2>
+            <p class="section-intro">Ready to take the next step in your career journey?</p>
+
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="info-card">
+                        <i class="fas fa-envelope"></i>
+                        <h4>Email</h4>
+                        <p><a href="mailto:your-email@example.com">your-email@example.com</a></p>
+                        <span class="customize-note">📝 Replace with your email</span>
+                    </div>
+
+                    <div class="info-card">
+                        <i class="fab fa-linkedin"></i>
+                        <h4>LinkedIn</h4>
+                        <p><a href="https://www.linkedin.com/in/kassandramontenegro/" target="_blank">Connect with me</a></p>
+                        <span class="customize-note">Professional profile</span>
+                    </div>
+
+                    <div class="info-card">
+                        <i class="fas fa-calendar-alt"></i>
+                        <h4>Schedule</h4>
+                        <p><a href="#">Book a Consultation</a></p>
+                        <span class="customize-note">📝 Add scheduling link</span>
+                    </div>
+                </div>
+
+                <form class="contact-form" onsubmit="handleFormSubmit(event)">
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <select required>
+                            <option value="">Select Area of Interest</option>
+                            <option value="Higher Education">Higher Education</option>
+                            <option value="Technology">Technology</option>
+                            <option value="Law">Law</option>
+                            <option value="General">General Inquiry</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Tell me about your career goals..." rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="cta-button">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
     <footer class="footer">
-        <div class="container">
-            <p>&copy; 2026 Kassi Montenegro | Career Consulting. All rights reserved.</p>
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/kassandramontenegro/" target="_blank">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-                <a href="mailto:kassandramontenegro.jobs@gmail.com">
-                    <i class="fas fa-envelope"></i>
-                </a>
+        <div class="footer-wrapper">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#about">About Me</a></li>
+                        <li><a href="#education">Higher Education</a></li>
+                        <li><a href="#tech">Technology</a></li>
+                        <li><a href="#law">Law</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#resources">All Resources</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="https://www.linkedin.com/in/kassandramontenegro/" target="_blank">LinkedIn</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="mailto:your-email@example.com">Email</a></li>
+                        <li><a href="#contact">Get in Touch</a></li>
+                        <li><a href="#home" class="scroll-top">Back to Top</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Kassandra Montenegro | Career Consulting. All rights reserved.</p>
             </div>
         </div>
     </footer>

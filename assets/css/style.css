@@ -1,865 +1,405 @@
-/* ============================================
-   CAREER CONSULTING PORTFOLIO
-   Color Palette: Higo Creative Style
-   Deep Navy + Vibrant Coral + Teal + Clean Whites
-   ============================================ */
-
-:root {
-    /* Primary Colors */
-    --navy-primary: #1a2640;
-    --navy-dark: #0f1620;
-    --navy-light: #2a3f5f;
-    
-    /* Accent Colors */
-    --coral-vibrant: #ff6b54;
-    --coral-hover: #ff5540;
-    --teal-accent: #1eae98;
-    --teal-light: #2dd4bf;
-    
-    /* Neutral Colors */
-    --white: #ffffff;
-    --cream-light: #f8f9fc;
-    --gray-light: #e8ecf1;
-    --gray-medium: #999999;
-    --gray-dark: #4a5568;
-    --charcoal: #1a1a1a;
-    
-    /* Typography Colors */
-    --text-primary: #1a2640;
-    --text-secondary: #4a5568;
-    --text-light: #999999;
-}
-
-/* ============================================
-   GLOBAL STYLES
-   ============================================ */
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    color: var(--text-primary);
-    background-color: var(--white);
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-    transition: all 0.3s ease;
-}
-
-a:hover {
-    color: var(--coral-vibrant);
-}
-
-h1, h2, h3, h4, h5, h6 {
-    color: var(--text-primary);
-    font-weight: 700;
-}
-
-p {
-    color: var(--text-secondary);
-}
-
-/* ============================================
-   NAVIGATION BAR
-   ============================================ */
-
-.navbar {
-    background-color: var(--white);
-    box-shadow: 0 2px 8px rgba(26, 38, 64, 0.08);
-    padding: 1rem 0;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    transition: all 0.3s ease;
-}
-
-.navbar.scrolled {
-    box-shadow: 0 4px 16px rgba(26, 38, 64, 0.12);
-    padding: 0.8rem 0;
-}
-
-.nav-container {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 0 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.nav-logo {
-    display: flex;
-    flex-direction: column;
-    gap: 0.25rem;
-}
-
-.nav-logo h1 {
-    font-size: 1.5rem;
-    color: var(--navy-primary);
-    margin: 0;
-}
-
-.tagline {
-    color: var(--coral-vibrant);
-    font-size: 0.75rem;
-    font-weight: 600;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    margin: 0;
-}
-
-.nav-menu {
-    display: flex;
-    list-style: none;
-    gap: 2.5rem;
-    flex-wrap: wrap;
-}
-
-.nav-item a {
-    color: var(--text-primary);
-    font-weight: 600;
-    font-size: 0.95rem;
-    position: relative;
-    transition: color 0.3s ease;
-}
-
-.nav-item a:hover,
-.nav-item a.active {
-    color: var(--coral-vibrant);
-}
-
-.nav-item a::after {
-    content: '';
-    position: absolute;
-    bottom: -8px;
-    left: 0;
-    width: 0;
-    height: 3px;
-    background: linear-gradient(90deg, var(--coral-vibrant), var(--teal-accent));
-    transition: width 0.3s ease;
-}
-
-.nav-item a:hover::after,
-.nav-item a.active::after {
-    width: 100%;
-}
-
-/* Hamburger Menu */
-.hamburger {
-    display: none;
-    flex-direction: column;
-    gap: 6px;
-    cursor: pointer;
-}
-
-.hamburger span {
-    width: 25px;
-    height: 3px;
-    background-color: var(--navy-primary);
-    border-radius: 2px;
-    transition: all 0.3s ease;
-}
-
-/* ============================================
-   MAIN CONTAINER & SECTIONS
-   ============================================ */
-
-.container {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 0 2rem;
-}
-
-section {
-    scroll-margin-top: 80px;
-}
-
-/* ============================================
-   HERO SECTION
-   ============================================ */
-
-.hero {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    align-items: center;
-    padding: 6rem 2rem;
-    min-height: 700px;
-}
-
-.hero-content h2 {
-    color: var(--navy-primary);
-    font-size: 3.5rem;
-    line-height: 1.2;
-    margin-bottom: 1.5rem;
-    font-weight: 800;
-}
-
-.hero-content h2 .highlight {
-    background: linear-gradient(135deg, var(--coral-vibrant), var(--teal-accent));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-}
-
-.hero-text {
-    color: var(--text-secondary);
-    font-size: 1.25rem;
-    line-height: 1.8;
-    margin-bottom: 2rem;
-}
-
-.hero-buttons {
-    display: flex;
-    gap: 1.5rem;
-    flex-wrap: wrap;
-}
-
-.hero-image {
-    position: relative;
-}
-
-.hero-image img {
-    width: 100%;
-    border-radius: 12px;
-    box-shadow: 0 20px 40px rgba(26, 38, 64, 0.15);
-    transition: transform 0.3s ease;
-}
-
-.hero-image:hover img {
-    transform: scale(1.02);
-}
-
-/* ============================================
-   BUTTONS
-   ============================================ */
-
-.btn {
-    display: inline-block;
-    padding: 0.9rem 1.8rem;
-    border-radius: 6px;
-    font-weight: 700;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    text-align: center;
-    font-size: 0.95rem;
-    border: none;
-}
-
-.btn-primary {
-    background: linear-gradient(135deg, var(--coral-vibrant), #ff8066);
-    color: var(--white);
-    box-shadow: 0 4px 15px rgba(255, 107, 84, 0.3);
-}
-
-.btn-primary:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(255, 107, 84, 0.4);
-    background: linear-gradient(135deg, var(--coral-hover), #ff6f4f);
-}
-
-.btn-secondary {
-    background-color: transparent;
-    color: var(--navy-primary);
-    border: 2px solid var(--navy-primary);
-}
-
-.btn-secondary:hover {
-    background-color: var(--navy-primary);
-    color: var(--white);
-}
-
-.btn-outline-coral {
-    background-color: transparent;
-    color: var(--coral-vibrant);
-    border: 2px solid var(--coral-vibrant);
-}
-
-.btn-outline-coral:hover {
-    background-color: var(--coral-vibrant);
-    color: var(--white);
-}
-
-/* ============================================
-   SECTION HEADERS
-   ============================================ */
-
-.section-header {
-    text-align: center;
-    margin-bottom: 4rem;
-}
-
-.section-header h2 {
-    font-size: 2.8rem;
-    color: var(--navy-primary);
-    margin-bottom: 1rem;
-}
-
-.section-header p {
-    font-size: 1.1rem;
-    color: var(--text-secondary);
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.section-tag {
-    display: inline-block;
-    background-color: var(--cream-light);
-    color: var(--coral-vibrant);
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
-    font-size: 0.85rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 1rem;
-}
-
-/* ============================================
-   ABOUT ME SECTION
-   ============================================ */
-
-.about-section {
-    background-color: var(--cream-light);
-    padding: 6rem 2rem;
-}
-
-.about-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    align-items: center;
-}
-
-.about-image img {
-    width: 100%;
-    border-radius: 12px;
-    box-shadow: 0 20px 40px rgba(26, 38, 64, 0.15);
-}
-
-.about-content h3 {
-    font-size: 2.2rem;
-    margin-bottom: 1.5rem;
-    color: var(--navy-primary);
-}
-
-.about-content p {
-    font-size: 1.05rem;
-    line-height: 1.9;
-    margin-bottom: 1.5rem;
-    color: var(--text-secondary);
-}
-
-.values-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-    margin-top: 2.5rem;
-}
-
-.value-card {
-    background-color: var(--white);
-    padding: 1.5rem;
-    border-radius: 8px;
-    text-align: center;
-    transition: all 0.3s ease;
-    border-top: 3px solid transparent;
-}
-
-.value-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(26, 38, 64, 0.1);
-}
-
-.value-card:nth-child(1) {
-    border-top-color: var(--coral-vibrant);
-}
-
-.value-card:nth-child(2) {
-    border-top-color: var(--teal-accent);
-}
-
-.value-card:nth-child(3) {
-    border-top-color: var(--coral-vibrant);
-}
-
-.value-card h4 {
-    color: var(--navy-primary);
-    margin-bottom: 0.75rem;
-    font-size: 1.1rem;
-}
-
-.value-card p {
-    color: var(--text-light);
-    font-size: 0.95rem;
-}
-
-/* ============================================
-   SERVICE CARDS SECTION
-   ============================================ */
-
-.services-section {
-    padding: 6rem 2rem;
-    background-color: var(--white);
-}
-
-.cards-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-}
-
-.service-card {
-    background-color: var(--cream-light);
-    border-radius: 12px;
-    overflow: hidden;
-    transition: all 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    border: 1px solid var(--gray-light);
-}
-
-.service-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 20px 40px rgba(255, 107, 84, 0.15);
-    border-color: var(--coral-vibrant);
-}
-
-.service-card-header {
-    background: linear-gradient(135deg, var(--navy-primary), var(--navy-light));
-    padding: 2rem;
-    text-align: center;
-    color: var(--white);
-}
-
-.service-card-header i {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    background: linear-gradient(135deg, var(--coral-vibrant), var(--teal-accent));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-}
-
-.service-card-header h3 {
-    color: var(--white);
-    font-size: 1.5rem;
-    margin: 0;
-}
-
-.service-card-content {
-    padding: 2rem;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-}
-
-.service-card-content p {
-    font-size: 0.95rem;
-    margin-bottom: 1.5rem;
-    flex-grow: 1;
-}
-
-.service-features {
-    list-style: none;
-    margin: 1rem 0;
-}
-
-.service-features li {
-    padding: 0.5rem 0;
-    color: var(--text-secondary);
-    font-size: 0.9rem;
-    padding-left: 1.5rem;
-    position: relative;
-}
-
-.service-features li:before {
-    content: "→";
-    position: absolute;
-    left: 0;
-    color: var(--coral-vibrant);
-    font-weight: bold;
-}
-
-/* ============================================
-   RESOURCES SECTION
-   ============================================ */
-
-.resources-section {
-    background-color: var(--cream-light);
-    padding: 6rem 2rem;
-}
-
-.resources-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-}
-
-.resource-card {
-    background-color: var(--white);
-    padding: 2rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(26, 38, 64, 0.08);
-    transition: all 0.3s ease;
-    border-left: 4px solid var(--coral-vibrant);
-}
-
-.resource-card:nth-child(even) {
-    border-left-color: var(--teal-accent);
-}
-
-.resource-card:hover {
-    transform: translateX(5px);
-    box-shadow: 0 12px 30px rgba(26, 38, 64, 0.15);
-}
-
-.resource-card i {
-    font-size: 2.5rem;
-    color: var(--coral-vibrant);
-    margin-bottom: 1rem;
-    display: block;
-}
-
-.resource-card:nth-child(even) i {
-    color: var(--teal-accent);
-}
-
-.resource-card h3 {
-    font-size: 1.3rem;
-    margin-bottom: 0.75rem;
-    color: var(--navy-primary);
-}
-
-.resource-card p {
-    color: var(--text-light);
-    font-size: 0.9rem;
-    margin-bottom: 1.5rem;
-}
-
-.resource-link {
-    display: inline-block;
-    color: var(--coral-vibrant);
-    font-weight: 700;
-    text-decoration: none;
-    transition: all 0.3s ease;
-}
-
-.resource-link:hover {
-    color: var(--coral-hover);
-    transform: translateX(3px);
-}
-
-/* ============================================
-   CONTACT SECTION
-   ============================================ */
-
-.contact-section {
-    padding: 6rem 2rem;
-    background-color: var(--white);
-}
-
-.contact-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    margin-bottom: 4rem;
-}
-
-.contact-card {
-    background: linear-gradient(135deg, var(--cream-light), var(--white));
-    padding: 2rem;
-    border-radius: 12px;
-    text-align: center;
-    border: 1px solid var(--gray-light);
-    transition: all 0.3s ease;
-}
-
-.contact-card:hover {
-    transform: translateY(-5px);
-    border-color: var(--coral-vibrant);
-    box-shadow: 0 10px 30px rgba(255, 107, 84, 0.1);
-}
-
-.contact-card i {
-    font-size: 2.5rem;
-    background: linear-gradient(135deg, var(--coral-vibrant), var(--teal-accent));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    margin-bottom: 1rem;
-}
-
-.contact-card h3 {
-    font-size: 1.2rem;
-    margin-bottom: 0.8rem;
-}
-
-.contact-card a {
-    color: var(--coral-vibrant);
-    font-weight: 700;
-    text-decoration: none;
-}
-
-.contact-card a:hover {
-    text-decoration: underline;
-}
-
-.contact-form-wrapper {
-    background-color: var(--cream-light);
-    padding: 3rem;
-    border-radius: 12px;
-    border: 1px solid var(--gray-light);
-}
-
-.contact-form-wrapper h3 {
-    font-size: 1.8rem;
-    margin-bottom: 0.5rem;
-    color: var(--navy-primary);
-}
-
-.contact-form-wrapper > p {
-    margin-bottom: 2rem;
-    color: var(--text-secondary);
-}
-
-#contactForm {
-    display: flex;
-    flex-direction: column;
-    gap: 1.2rem;
-}
-
-#contactForm input,
-#contactForm select,
-#contactForm textarea {
-    padding: 0.9rem;
-    border: 1px solid var(--gray-light);
-    border-radius: 6px;
-    font-size: 0.95rem;
-    font-family: inherit;
-    transition: all 0.3s ease;
-    background-color: var(--white);
-    color: var(--text-primary);
-}
-
-#contactForm input::placeholder,
-#contactForm select::placeholder,
-#contactForm textarea::placeholder {
-    color: var(--gray-medium);
-}
-
-#contactForm input:focus,
-#contactForm select:focus,
-#contactForm textarea:focus {
-    outline: none;
-    border-color: var(--coral-vibrant);
-    box-shadow: 0 0 0 4px rgba(255, 107, 84, 0.1);
-    background-color: var(--white);
-}
-
-/* ============================================
-   FOOTER
-   ============================================ */
-
-.footer {
-    background-color: var(--navy-primary);
-    color: var(--white);
-    padding: 4rem 2rem 2rem;
-}
-
-.footer-content {
-    max-width: 1400px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 3rem;
-    margin-bottom: 3rem;
-}
-
-.footer-section h4 {
-    color: var(--coral-vibrant);
-    margin-bottom: 1.5rem;
-    font-size: 1rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.footer-section ul {
-    list-style: none;
-}
-
-.footer-section ul li {
-    margin-bottom: 0.8rem;
-}
-
-.footer-section a {
-    color: rgba(255, 255, 255, 0.8);
-    transition: color 0.3s ease;
-    font-size: 0.95rem;
-}
-
-.footer-section a:hover {
-    color: var(--coral-vibrant);
-}
-
-.footer-bottom {
-    text-align: center;
-    padding-top: 2rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    color: rgba(255, 255, 255, 0.7);
-    font-size: 0.9rem;
-}
-
-/* ============================================
-   RESPONSIVE DESIGN
-   ============================================ */
-
-@media (max-width: 1024px) {
-    .hero {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-        padding: 4rem 2rem;
-        min-height: auto;
-    }
-
-    .hero-content h2 {
-        font-size: 2.5rem;
-    }
-
-    .about-grid {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-
-    .cards-grid,
-    .resources-grid,
-    .contact-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1.5rem;
-    }
-
-    .values-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 768px) {
-    .nav-menu {
-        gap: 1.5rem;
-    }
-
-    .nav-item a {
-        font-size: 0.85rem;
-    }
-
-    .hero {
-        padding: 3rem 1.5rem;
-    }
-
-    .hero-content h2 {
-        font-size: 2rem;
-    }
-
-    .hero-text {
-        font-size: 1rem;
-    }
-
-    .section-header h2 {
-        font-size: 2rem;
-    }
-
-    .cards-grid,
-    .resources-grid,
-    .contact-grid,
-    .values-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .container {
-        padding: 0 1.5rem;
-    }
-
-    .about-section,
-    .services-section,
-    .resources-section,
-    .contact-section {
-        padding: 4rem 1.5rem;
-    }
-
-    .hero-buttons {
-        flex-direction: column;
-    }
-
-    .btn {
-        width: 100%;
-    }
-}
-
-@media (max-width: 480px) {
-    .nav-logo h1 {
-        font-size: 1.2rem;
-    }
-
-    .tagline {
-        font-size: 0.7rem;
-    }
-
-    .hero-content h2 {
-        font-size: 1.5rem;
-    }
-
-    .section-header h2 {
-        font-size: 1.6rem;
-    }
-
-    .service-card-content,
-    .resource-card,
-    .contact-card {
-        padding: 1.5rem;
-    }
-
-    .contact-form-wrapper {
-        padding: 1.5rem;
-    }
-
-    #contactForm {
-        gap: 1rem;
-    }
-}
-
-/* ============================================
-   ANIMATIONS & TRANSITIONS
-   ============================================ */
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.fade-in-up {
-    animation: fadeInUp 0.6s ease-out;
-}
-
-/* Smooth scrolling for all sections */
-section {
-    transition: background-color 0.3s ease;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kassandra Montenegro | Career Consulting</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h1>Kassandra Montenegro</h1>
+                <p class="tagline">Career Consulting & Professional Development</p>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#" onclick="showTab('home')">Home</a></li>
+                <li class="nav-item"><a href="#" onclick="showTab('education')">Higher Education</a></li>
+                <li class="nav-item"><a href="#" onclick="showTab('tech')">Technology</a></li>
+                <li class="nav-item"><a href="#" onclick="showTab('law')">Law</a></li>
+                <li class="nav-item"><a href="#" onclick="showTab('contact')">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- HOME TAB -->
+    <div id="home" class="tab-content active">
+        <div class="container">
+            <section class="hero">
+                <div class="hero-content">
+                    <h2>Transform Your Career Journey</h2>
+                    <p class="hero-text">Expert guidance in higher education, technology, and law. Personalized strategies to help you achieve your professional goals.</p>
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary" onclick="showTab('contact')">Get Started</button>
+                        <a href="https://www.linkedin.com/in/kassandramontenegro/" target="_blank" class="btn btn-secondary">Connect on LinkedIn</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="https://via.placeholder.com/400x300?text=Career+Consulting" alt="Career Consulting">
+                </div>
+            </section>
+
+            <!-- SERVICES OVERVIEW -->
+            <section class="highlights">
+                <h3>Our Service Areas</h3>
+                <div class="cards-grid">
+                    <div class="card">
+                        <i class="fas fa-graduation-cap"></i>
+                        <h4>Higher Education</h4>
+                        <p>College selection, major planning, and graduate school preparation. Navigate the academic landscape with confidence.</p>
+                        <a href="#" onclick="showTab('education')" style="color: #d4a574; font-weight: 600;">Learn More →</a>
+                    </div>
+                    <div class="card">
+                        <i class="fas fa-laptop-code"></i>
+                        <h4>Technology</h4>
+                        <p>Career transitions, skill development, and interview preparation. Break into or advance in the tech industry.</p>
+                        <a href="#" onclick="showTab('tech')" style="color: #d4a574; font-weight: 600;">Learn More →</a>
+                    </div>
+                    <div class="card">
+                        <i class="fas fa-gavel"></i>
+                        <h4>Law</h4>
+                        <p>Law school strategy, bar exam prep, and legal career guidance. Build a successful legal career.</p>
+                        <a href="#" onclick="showTab('law')" style="color: #d4a574; font-weight: 600;">Learn More →</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- HIGHER EDUCATION TAB -->
+    <div id="education" class="tab-content">
+        <div class="container">
+            <div class="tab-header">
+                <h2><i class="fas fa-graduation-cap"></i>Higher Education Consulting</h2>
+                <p class="section-subtitle">Guide your academic journey toward success</p>
+            </div>
+
+            <!-- Section 1 -->
+            <section class="content-section">
+                <div class="section-left">
+                    <h3>College Selection & Admissions</h3>
+                    <p>Navigate the college selection process with confidence. Whether you're considering Ivy League schools, state universities, or specialized colleges, I'll help you find the right fit for your academic goals and personal values.</p>
+                    <ul class="features-list">
+                        <li><strong>University Comparison:</strong> Research and evaluate schools based on programs, culture, and fit</li>
+                        <li><strong>Application Strategy:</strong> Timeline planning and strategic application targeting</li>
+                        <li><strong>Essays & Statements:</strong> Personal statement and supplemental essay review</li>
+                        <li><strong>Interview Prep:</strong> Comprehensive interview coaching and preparation</li>
+                        <li><strong>Financial Aid:</strong> Scholarship and financial aid navigation</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary" style="width: fit-content;">Download College Guide</a>
+                </div>
+                <div class="section-right">
+                    <img src="https://via.placeholder.com/400x300?text=College+Selection" alt="College Selection">
+                </div>
+            </section>
+
+            <!-- Section 2 -->
+            <section class="content-section reverse">
+                <div class="section-left">
+                    <img src="https://via.placeholder.com/400x300?text=Major+Planning" alt="Major Planning">
+                </div>
+                <div class="section-right">
+                    <h3>Major Selection & Career Planning</h3>
+                    <p>Choosing the right major is crucial to your academic and career success. I'll help you align your interests with career opportunities and ensure you're building the skills employers value.</p>
+                    <ul class="features-list">
+                        <li><strong>Interest Assessment:</strong> Identify your strengths and passions</li>
+                        <li><strong>Major Exploration:</strong> Deep dive into academic programs and outcomes</li>
+                        <li><strong>Career Mapping:</strong> Visualize potential career paths from different majors</li>
+                        <li><strong>Internship Strategy:</strong> Build experience and network during college</li>
+                        <li><strong>Skills Development:</strong> Identify and develop marketable skills</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary" style="width: fit-content;">Major Exploration Worksheet</a>
+                </div>
+            </section>
+
+            <!-- Section 3 -->
+            <section class="content-section">
+                <div class="section-left">
+                    <h3>Graduate School Preparation</h3>
+                    <p>Ready to pursue advanced studies? Get expert guidance on selecting graduate programs, preparing applications, and planning your advanced degree strategy for success.</p>
+                    <div class="resources-grid full-width">
+                        <div class="resource-item">
+                            <i class="fas fa-book"></i>
+                            <h4>Standardized Tests</h4>
+                            <p>GRE/GMAT strategy and study resource recommendations</p>
+                        </div>
+                        <div class="resource-item">
+                            <i class="fas fa-search"></i>
+                            <h4>Program Research</h4>
+                            <p>Ranking analysis and program fit evaluation</p>
+                        </div>
+                        <div class="resource-item">
+                            <i class="fas fa-pen"></i>
+                            <h4>Application Essays</h4>
+                            <p>Statement of purpose and personal statement crafting</p>
+                        </div>
+                        <div class="resource-item">
+                            <i class="fas fa-dollar-sign"></i>
+                            <h4>Funding Strategy</h4>
+                            <p>Scholarship and assistantship opportunity identification</p>
+                        </div>
+                    </div>
+                    <a href="https://www.linkedin.com/in/kassandramontenegro/" target="_blank" class="btn btn-primary" style="margin-top: 2rem;">Learn More</a>
+                </div>
+                <div class="section-right">
+                    <img src="https://via.placeholder.com/400x300?text=Graduate+School" alt="Graduate School">
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- TECHNOLOGY TAB -->
+    <div id="tech" class="tab-content">
+        <div class="container">
+            <div class="tab-header">
+                <h2><i class="fas fa-laptop-code"></i>Technology Career Consulting</h2>
+                <p class="section-subtitle">Launch or advance your tech career</p>
+            </div>
+
+            <!-- Section 1 -->
+            <section class="content-section">
+                <div class="section-left">
+                    <h3>Career Transitions in Tech</h3>
+                    <p>Thinking of breaking into tech? Whether you're switching industries or starting your first tech role, I'll help you navigate the transition successfully with a clear roadmap.</p>
+                    <ul class="features-list">
+                        <li><strong>Career Pivot Strategy:</strong> Plan your transition with clear milestones</li>
+                        <li><strong>Skill Gap Analysis:</strong> Identify what you need to learn</li>
+                        <li><strong>Learning Paths:</strong> Bootcamp vs. degree comparison and recommendations</li>
+                        <li><strong>Portfolio Building:</strong> Create projects that showcase your skills</li>
+                        <li><strong>Networking:</strong> Build relationships in the tech community</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary" style="width: fit-content;">Tech Career Roadmap</a>
+                </div>
+                <div class="section-right">
+                    <img src="https://via.placeholder.com/400x300?text=Tech+Career" alt="Tech Career">
+                </div>
+            </section>
+
+            <!-- Section 2 -->
+            <section class="content-section reverse">
+                <div class="section-left">
+                    <img src="https://via.placeholder.com/400x300?text=Interview+Prep" alt="Interview Prep">
+                </div>
+                <div class="section-right">
+                    <h3>Interview Preparation & Technical Skills</h3>
+                    <p>Ace your tech interviews with personalized preparation. From coding challenges to system design, behavioral questions to offer negotiation, I'll help you showcase your best self.</p>
+                    <ul class="features-list">
+                        <li><strong>Technical Practice:</strong> Algorithm and data structure problem-solving</li>
+                        <li><strong>System Design:</strong> Architecture and design interview coaching</li>
+                        <li><strong>Behavioral Coaching:</strong> STAR method and storytelling practice</li>
+                        <li><strong>Company Research:</strong> Deep dive into potential employers</li>
+                        <li><strong>Negotiation:</strong> Salary and offer negotiation strategies</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary" style="width: fit-content;">Interview Checklists</a>
+                </div>
+            </section>
+
+            <!-- Section 3 -->
+            <section class="content-section">
+                <div class="section-left">
+                    <h3>Tech Specializations & Career Paths</h3>
+                    <p>Explore different tech career paths and find your niche. From software engineering to data science, product management to UX design, discover the role that matches your interests.</p>
+                    <div class="resources-grid full-width">
+                        <div class="resource-item">
+                            <i class="fas fa-code"></i>
+                            <h4>Software Development</h4>
+                            <p>Frontend, backend, full-stack, and mobile development paths</p>
+                        </div>
+                        <div class="resource-item">
+                            <i class="fas fa-chart-line"></i>
+                            <h4>Data & AI</h4>
+                            <p>Data science, machine learning, and data engineering roles</p>
+                        </div>
+                        <div class="resource-item">
+                            <i class="fas fa-cube"></i>
+                            <h4>Product & Design</h4>
+                            <p>Product management, UX/UI design, and user research</p>
+                        </div>
+                        <div class="resource-item">
+                            <i class="fas fa-server"></i>
+                            <h4>DevOps & Cloud</h4>
+                            <p>Cloud architecture, infrastructure, and DevOps engineering</p>
+                        </div>
+                    </div>
+                    <a href="https://www.linkedin.com/in/kassandramontenegro/" target="_blank" class="btn btn-primary" style="margin-top: 2rem;">Explore Specializations</a>
+                </div>
+                <div class="section-right">
+                    <img src="https://via.placeholder.com/400x300?text=Tech+Specializations" alt="Tech Specializations">
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- LAW TAB -->
+    <div id="law" class="tab-content">
+        <div class="container">
+            <div class="tab-header">
+                <h2><i class="fas fa-gavel"></i>Legal Career Consulting</h2>
+                <p class="section-subtitle">Navigate law school and build a successful legal career</p>
+            </div>
+
+            <!-- Section 1 -->
+            <section class="content-section">
+                <div class="section-left">
+                    <h3>Law School Preparation & Strategy</h3>
+                    <p>Considering law school? Get expert guidance on school selection, LSAT preparation, and application strategy to maximize your chances of admission to top schools.</p>
+                    <ul class="features-list">
+                        <li><strong>LSAT Strategy:</strong> Study plan, timing, and resource recommendations</li>
+                        <li><strong>School Selection:</strong> Law school ranking analysis and fit evaluation</li>
+                        <li><strong>Personal Statements:</strong> Craft compelling application essays</li>
+                        <li><strong>Application Timeline:</strong> Deadlines and strategic submission planning</li>
+                        <li><strong>Financial Planning:</strong> Scholarship negotiation and financial aid</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary" style="width: fit-content;">Law School Planning Guide</a>
+                </div>
+                <div class="section-right">
+                    <img src="https://via.placeholder.com/400x300?text=Law+School" alt="Law School">
+                </div>
+            </section>
+
+            <!-- Section 2 -->
+            <section class="content-section reverse">
+                <div class="section-left">
+                    <img src="https://via.placeholder.com/400x300?text=Bar+Exam" alt="Bar Exam">
+                </div>
+                <div class="section-right">
+                    <h3>Bar Exam Preparation & Professional Success</h3>
+                    <p>Pass the bar and launch your legal career with confidence. I provide comprehensive guidance on bar prep strategy, ethical considerations, and career planning.</p>
+                    <ul class="features-list">
+                        <li><strong>Bar Prep Strategy:</strong> Course comparison and study schedule optimization</li>
+                        <li><strong>Jurisdiction Guide:</strong> State-specific bar passage strategies</li>
+                        <li><strong>Ethics Review:</strong> Professional responsibility and conduct</li>
+                        <li><strong>New Lawyer Transition:</strong> First job preparation and expectations</li>
+                        <li><strong>Continuing Education:</strong> CLEs and professional development</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary" style="width: fit-content;">Bar Prep Resources</a>
+                </div>
+            </section>
+
+            <!-- Section 3 -->
+            <section class="content-section">
+                <div class="section-left">
+                    <h3>Legal Specializations & Career Paths</h3>
+                    <p>Explore diverse legal career options and find your practice area. From corporate law to public interest, I'll help you chart a meaningful legal career aligned with your values.</p>
+                    <div class="resources-grid full-width">
+                        <div class="resource-item">
+                            <i class="fas fa-briefcase"></i>
+                            <h4>Corporate Law</h4>
+                            <p>M&A, contracts, and corporate governance practice areas</p>
+                        </div>
+                        <div class="resource-item">
+                            <i class="fas fa-handshake"></i>
+                            <h4>Public Interest</h4>
+                            <p>Government, nonprofits, and civil rights legal work</p>
+                        </div>
+                        <div class="resource-item">
+                            <i class="fas fa-gavel"></i>
+                            <h4>Litigation</h4>
+                            <p>Trial practice and dispute resolution specializations</p>
+                        </div>
+                        <div class="resource-item">
+                            <i class="fas fa-lightbulb"></i>
+                            <h4>Specialized Practice</h4>
+                            <p>IP, healthcare, immigration, tax, and other niches</p>
+                        </div>
+                    </div>
+                    <a href="https://www.linkedin.com/in/kassandramontenegro/" target="_blank" class="btn btn-primary" style="margin-top: 2rem;">Explore Legal Careers</a>
+                </div>
+                <div class="section-right">
+                    <img src="https://via.placeholder.com/400x300?text=Legal+Careers" alt="Legal Careers">
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- CONTACT TAB -->
+    <div id="contact" class="tab-content">
+        <div class="container">
+            <div class="tab-header">
+                <h2><i class="fas fa-envelope"></i>Get in Touch</h2>
+                <p class="section-subtitle">Ready to take the next step in your career?</p>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-bottom: 3rem;">
+                <div class="card">
+                    <i class="fas fa-envelope"></i>
+                    <h4>Email</h4>
+                    <p><a href="mailto:your-email@example.com" style="color: #d4a574; font-weight: 600;">your-email@example.com</a></p>
+                    <p style="font-size: 0.9rem; color: #999; margin-top: 1rem;">📝 CUSTOMIZE ME - Replace with your actual email</p>
+                </div>
+
+                <div class="card">
+                    <i class="fab fa-linkedin"></i>
+                    <h4>LinkedIn</h4>
+                    <p><a href="https://www.linkedin.com/in/kassandramontenegro/" target="_blank" style="color: #d4a574; font-weight: 600;">Connect with me</a></p>
+                    <p style="font-size: 0.9rem; color: #999; margin-top: 1rem;">Professional profile and recommendations</p>
+                </div>
+
+                <div class="card">
+                    <i class="fas fa-calendar-check"></i>
+                    <h4>Schedule</h4>
+                    <p><a href="#" style="color: #d4a574; font-weight: 600;">Book a Consultation</a></p>
+                    <p style="font-size: 0.9rem; color: #999; margin-top: 1rem;">📝 CUSTOMIZE ME - Add Calendly or Acuity Scheduling link</p>
+                </div>
+            </div>
+
+            <div style="max-width: 600px; margin: 0 auto; background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);">
+                <h3 style="text-align: center;">Quick Message</h3>
+                <p style="text-align: center; color: #666; margin-bottom: 2rem;">Fill out the form below and I'll get back to you soon</p>
+                <form onsubmit="handleFormSubmit(event)">
+                    <input type="text" placeholder="Your Name" required style="width: 100%; padding: 0.75rem; margin-bottom: 1rem; border: 1px solid #ddd; border-radius: 5px; font-family: inherit;">
+                    <input type="email" placeholder="Your Email" required style="width: 100%; padding: 0.75rem; margin-bottom: 1rem; border: 1px solid #ddd; border-radius: 5px; font-family: inherit;">
+                    <select required style="width: 100%; padding: 0.75rem; margin-bottom: 1rem; border: 1px solid #ddd; border-radius: 5px; font-family: inherit;">
+                        <option value="">Select Your Interest</option>
+                        <option value="Higher Education">Higher Education</option>
+                        <option value="Technology">Technology</option>
+                        <option value="Law">Law</option>
+                        <option value="General">General Inquiry</option>
+                    </select>
+                    <textarea placeholder="Tell me about your career goals..." rows="5" required style="width: 100%; padding: 0.75rem; margin-bottom: 1rem; border: 1px solid #ddd; border-radius: 5px; font-family: inherit; resize: vertical;"></textarea>
+                    <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 0.5rem;">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="#" onclick="showTab('education')">Higher Education</a></li>
+                    <li><a href="#" onclick="showTab('tech')">Technology</a></li>
+                    <li><a href="#" onclick="showTab('law')">Law</a></li>
+                    <li><a href="#" onclick="showTab('contact')">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Connect</h4>
+                <ul>
+                    <li><a href="https://www.linkedin.com/in/kassandramontenegro/" target="_blank">LinkedIn</a></li>
+                    <li><a href="mailto:your-email@example.com">Email</a></li>
+                    <li><a href="#" onclick="showTab('contact')">Schedule</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#" onclick="showTab('home')">Home</a></li>
+                    <li><a href="#" onclick="showTab('contact')">Get Started</a></li>
+                    <li><a href="#" onclick="document.body.scrollTop = 0">Back to Top</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Kassandra Montenegro | Career Consulting. All rights reserved. | <a href="#" style="color: #d4a574;">Privacy Policy</a></p>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
